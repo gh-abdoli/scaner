@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>362</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Scanner</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon/ir.png</normaloff>../icon/ir.png</iconset>
+  </property>
+  <widget class="QWidget" name="canvas">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTabWidget" name="mainFram">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>481</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::ActionsContextMenu</enum>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Triangular</enum>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="IP">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../icon/e4d0af18af30a4aeb70e0ccb0078d4cb.png</normaloff>../icon/e4d0af18af30a4aeb70e0ccb0078d4cb.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>IP Scanner</string>
+      </attribute>
+      <widget class="QToolBox" name="toolBoxIP">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>431</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::VLine</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="rangeIP">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>429</width>
+          <height>149</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>../icon/default-ip.png</normaloff>../icon/default-ip.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>Scan a range IP</string>
+        </attribute>
+        <widget class="QFrame" name="frame_7">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>0</y>
+           <width>381</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="scanIp1">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>100</y>
+            <width>91</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>Scanning your IP range</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="startLineEditIP">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>10</y>
+            <width>171</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>0.0.0.0</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="endLineEditIP">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>60</y>
+            <width>171</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>255.255.255.255</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="startLabelIp">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>51</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>2</width>
+            <height>2</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Start IP</string>
+          </property>
+          <property name="buddy">
+           <cstring>startLineEditIP</cstring>
+          </property>
+         </widget>
+         <widget class="QLabel" name="endLabelIp">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>51</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>2</width>
+            <height>2</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>End IP</string>
+          </property>
+          <property name="buddy">
+           <cstring>endLineEditIP</cstring>
+          </property>
+         </widget>
+         <widget class="Line" name="line_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>50</y>
+            <width>118</width>
+            <height>3</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="Line" name="line_4">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>20</y>
+            <width>3</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="hostIP">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>100</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>../icon/what_is_my_ip_address.png</normaloff>../icon/what_is_my_ip_address.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>Detect the IP of Host name</string>
+        </attribute>
+        <widget class="QFrame" name="frame_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>381</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="scanIP2">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>70</y>
+            <width>91</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>Detect IP address</string>
+          </property>
+          <property name="statusTip">
+           <string>Detect IP</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="hostName">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>20</y>
+            <width>171</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Enter your Host Name: </string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="hostLabel">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>121</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>2</width>
+            <height>2</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Enter host to scan: </string>
+          </property>
+          <property name="buddy">
+           <cstring>hostName</cstring>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="MyIPAddress">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>100</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Detect  my IP address</string>
+        </attribute>
+        <widget class="QFrame" name="frame_8">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>0</y>
+           <width>371</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="midLineWidth">
+          <number>-3</number>
+         </property>
+         <widget class="QPushButton" name="scanPCIP">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>91</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>IP Scanning</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>30</y>
+            <width>361</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>   Press Scan to detect your Computer IP Address: </string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="myIPLineEdit">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>90</y>
+            <width>161</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>  My address  IP is: </string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Port">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../icon/d3a1cd1e79201295ffde6c5d6f680d7f.png</normaloff>../icon/d3a1cd1e79201295ffde6c5d6f680d7f.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Port Scanner</string>
+      </attribute>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>20</y>
+         <width>161</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>0</y>
+          <width>131</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QTableView" name="table">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>211</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="scanPort">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>130</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Port Scanning</string>
+        </property>
+        <property name="text">
+         <string>Scan</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="startPort">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="endPort">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>70</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="maximum">
+         <number>65535</number>
+        </property>
+        <property name="value">
+         <number>65535</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="startLabelPort">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>2</width>
+          <height>2</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Start Port</string>
+        </property>
+        <property name="buddy">
+         <cstring>startPort</cstring>
+        </property>
+       </widget>
+       <widget class="QLabel" name="endLabelPort">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>2</width>
+          <height>2</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>End  Port</string>
+        </property>
+        <property name="buddy">
+         <cstring>endPort</cstring>
+        </property>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>30</y>
+          <width>3</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>60</y>
+          <width>118</width>
+          <height>3</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>221</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="IP_PortScaner">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>30</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Enter your IP: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="hostLabel_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>2</width>
+          <height>2</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Enter IP: </string>
+        </property>
+        <property name="buddy">
+         <cstring>hostName</cstring>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PC">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../icon/113f15629c5bb690c359ae540cec01fd.png</normaloff>../icon/113f15629c5bb690c359ae540cec01fd.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>  IP Location</string>
+      </attribute>
+      <widget class="QFrame" name="frame_11">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>391</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="midLineWidth">
+        <number>-3</number>
+       </property>
+       <widget class="QPushButton" name="scanIPLocation">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>90</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>IP Scanning</string>
+        </property>
+        <property name="text">
+         <string>Scan</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>361</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>   Press Scan to detect  location IP Address: </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="IPLocation">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>90</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>  Enter IP address : </string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Trace">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../icon/whois_ip.png</normaloff>../icon/whois_ip.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Track </string>
+      </attribute>
+      <widget class="QFrame" name="frame_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>441</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="traceButton">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>90</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Trace IP</string>
+        </property>
+        <property name="text">
+         <string>Track</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addressIPTrace">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>40</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Track IP , Host or webSite: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="hostLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>2</width>
+          <height>2</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Press Track to Track IP , Host or webSite: </string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="buddy">
+         <cstring>hostName</cstring>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="TransferFile">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../icon/avatar32.jpg</normaloff>../icon/avatar32.jpg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>File Transfer</string>
+      </attribute>
+      <widget class="QToolBox" name="toolBoxFtp">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>431</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::VLine</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabSpacing">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="uploadFile">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>429</width>
+          <height>179</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>../icon/designer-tab-order-tool.png</normaloff>../icon/designer-tab-order-tool.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>Upload file against Target</string>
+        </attribute>
+        <widget class="QFrame" name="frame_5">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>0</y>
+           <width>361</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="upload">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>110</y>
+            <width>91</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>Upload File</string>
+          </property>
+          <property name="text">
+           <string>Upload</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="chooseFileUpload">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>50</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Choose your File</string>
+          </property>
+          <property name="text">
+           <string>Choose File For Upload</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="downloadFile">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>100</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>../icon/tux.png</normaloff>../icon/tux.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>Download file from Target</string>
+        </attribute>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>371</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="download">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>100</y>
+            <width>91</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>Download File</string>
+          </property>
+          <property name="text">
+           <string>Download</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="addressFile">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>40</y>
+            <width>171</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="hostLabel_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>141</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>2</width>
+            <height>2</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Enter location file name: </string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+          <property name="buddy">
+           <cstring>hostName</cstring>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menu_IP_Scanning">
+     <property name="title">
+      <string>&amp;IP Scanning</string>
+     </property>
+     <addaction name="actionRange_IP"/>
+     <addaction name="separator"/>
+     <addaction name="actionHost_Name"/>
+     <addaction name="actionMy_IP_address"/>
+    </widget>
+    <addaction name="menu_IP_Scanning"/>
+    <addaction name="Port_Scanning"/>
+    <addaction name="separator"/>
+    <addaction name="action_Trace"/>
+    <addaction name="IP_Computer"/>
+    <addaction name="separator"/>
+    <addaction name="Exit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="Transfer">
+    <property name="title">
+     <string>&amp;Transfer</string>
+    </property>
+    <addaction name="Download"/>
+    <addaction name="separator"/>
+    <addaction name="Upload"/>
+   </widget>
+   <widget class="QMenu" name="HelpMenu">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="Help"/>
+    <addaction name="separator"/>
+    <addaction name="Contact"/>
+   </widget>
+   <addaction name="File"/>
+   <addaction name="Transfer"/>
+   <addaction name="HelpMenu"/>
+  </widget>
+  <action name="Port_Scanning">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/Ico_alpha_SearchIndex_32x32.png</normaloff>../icon/Ico_alpha_SearchIndex_32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Port Scanning</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="IP_Computer">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/default-ip.png</normaloff>../icon/default-ip.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Computer IP</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+I</string>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/o_close.png</normaloff>../icon/o_close.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="Download">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/download.png</normaloff>../icon/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Download</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="Upload">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/connect.png</normaloff>../icon/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Upload</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="Help">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/help.png</normaloff>../icon/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Help</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="Contact">
+   <property name="icon">
+    <iconset>
+     <normalon>../icon/email.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Contact</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionRange_IP">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/3-0.gif</normaloff>../icon/3-0.gif</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Range IP</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+I</string>
+   </property>
+  </action>
+  <action name="actionHost_Name">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/smalllogo.png</normaloff>../icon/smalllogo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Host Name</string>
+   </property>
+  </action>
+  <action name="action_Trace">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/new.gif</normaloff>../icon/new.gif</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Trace</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionMy_IP_address">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icon/hide_my_ip_address.png</normaloff>../icon/hide_my_ip_address.png</iconset>
+   </property>
+   <property name="text">
+    <string>My IP address</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
